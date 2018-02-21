@@ -1,0 +1,60 @@
+import random
+play=("rock" , "paper" , "scissor" )
+
+comp =0
+me =0
+
+while (True) :
+    user= input(" enter rock , paper , or scissor " )
+    game=random.choice( play )
+    print("computer choosed",game) 
+    print("u choosed",user)
+    user.lower()
+    while (comp<=5 or me <= 5) :
+        if (game==user) :
+            print ("tie")
+            break
+        elif (user=="rock") :
+            if game=="paper" :
+                print (" the computer wins the game " )
+                comp=comp+1
+                print("computer" ,comp)
+                break
+            else :
+                print ("you have won the game" )
+                me=me+1
+                print("my points " ,me)
+                break
+        elif (user=="paper" ) :
+            if (game=="rock") :
+                print (" you won the game " )
+                me=me+1
+                print("my points " ,me)
+                break
+            else :
+                print ("computer won the game " )
+                comp=comp+1
+                print(" computer pints are " ,comp)
+                break
+        elif (user=="scissors" ) :
+            if (game=="rock") :
+                print (" computer won the game ")
+                comp=comp+1
+                print(" computer has got " ,comp)
+                break
+            else :
+                print ("you won the game" )
+                me=me+1
+                print(" my points are " ,me)
+                break
+            if (comp==5) :
+                print("computer won the game!!!!!!!!!!!!!!")
+            if(user==5) :
+                print("you won the game!!!!!!!!!!!!!!!!!!!!")
+            if (comp==5) :
+                break
+            if (user==5) :
+                break
+          
+            
+
